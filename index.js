@@ -80,7 +80,7 @@ app.post('/verify-google-token', async (req, res) => {
     }
 
     // Buat JWT
-    const token = jwt.sign({ email: user.email, userID: user.userID }, JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ email: user.email, userID: user.userID }, JWT_SECRET, { expiresIn: '24h' });
 
     res.status(200).json({
       error: false,
